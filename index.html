@@ -1,0 +1,60 @@
+<!DOCTYPE html lang="en-US">
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Personalized & Intelligent Concierge Service
+        </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link rel='stylesheet' href='css/style.css' type='text/css' media='all' />		
+    </head>
+
+    <body>
+        <div class="icompazz-wrapper">
+            <div class="icompazz-wrapper-slider">
+                <div class="icompazz-wrapper-slider-box bg-2">
+
+                </div>
+                <div class="icompazz-wrapper-slider-box bg-3">
+
+                </div>
+            </div>            
+            <div class="icompazz-form">
+                <div class="icompazz-logo"></div>
+                <form class="box-form" onsubmit="return submitEmail();">
+                    <div class="local-overlay"></div>
+                    <div class="form-group">
+                        <div class="col-xs-12 text-center">
+                            <h4>Keep me updated?</h4>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 text-center">
+                            <input type="text" placeholder="Email address" value="" spellcheck="false" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 text-center">
+                            <button class="btn" type="submit">Submit</button>
+                        </div>
+                    </div>
+                    <div class="popover">
+                        <div class="popover-content">
+                            <div class="success-email">
+                                <p>Thank you for your interest!</p>
+                                <p>We'll send you the latest updates as they come!</p>
+                            </div>
+                            <div class="error-email">
+                                <br><p>Sorry, your email is invalid. Please try again.</p>
+                            </div>
+                            <button onclick="jQuery(this).closest('.popover').fadeOut(); return false;" class="btn">Ok</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+    </body>
+</html>

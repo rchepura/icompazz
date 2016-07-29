@@ -1,0 +1,87 @@
+
+.icompazz-wrapper {
+    height: 100%;
+    width: 100%;
+}
+.icompazz-wrapper-slider {
+    height: 100%;
+    width: 200%;
+    position: fixed;
+    left: 0;
+}
+.icompazz-wrapper-slider-box {
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+}
+.icompazz-wrapper-slider-box.bg-2 {
+    background-image: url("../images/assets/bg_2.png");
+}
+.icompazz-wrapper-slider-box.bg-3 {
+    background-image: url("../images/assets/bg_3.png");
+    left: 50%;
+}
+
+.icompazz-form {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.icompazz-form .icompazz-logo {
+    background: url('../images/assets/logo_icompazz.png') no-repeat 50% 50% transparent;
+    margin-bottom: 220px;
+    height: 255;
+}
+.icompazz-form .box-form {
+    width: 470px;
+    height: 176px;
+    background: #fff;
+    border: none;
+    border-radius: 16px;
+    margin: 0 auto;
+}
+
+.box-form h4 {
+    margin: 15px 0;
+}
+.box-form input {
+    border: 4px solid #81C028;
+    border-radius: 12px;
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 6px 12px;
+    width: 90%;
+}
+.box-form button {
+    background: #81C028;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 6px 50px;
+}
+.box-form .popover {
+    height: 100%;
+    width: 100%;
+}
+.icompazz-form .box-form .popover {
+    background: transparent;
+    font-weight: 300;
+    max-width: none;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    
+}
+@media (max-width: 992px) {
+    
+}
