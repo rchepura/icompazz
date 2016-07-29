@@ -8,17 +8,22 @@ jQuery(document).ready(function() {
     
     function init() {
         var $slideBG = $('.icompazz-wrapper-slider'),
+            $slideItems = $slideBG.find('.icompazz-wrapper-slider-box').length,
             doAnim = function(pos) {
-                console.log('eee');
-                $slideBG.stop().animate({left: ( pos ? '-100%' : 0)}, function() {
+                pos = pos || 1;
+                $slideBG.stop().animate({left: '-' + (pos * 100) + '%'}, 700, function() {
+                    pos++;
                     window.setTimeout(function() {
-                        doAnim(!pos);
+                        if ( $slideItems === pos ) {
+                            $slideBG.css({left: 0});
+                            pos = 1;
+                        }
+                        doAnim(pos);
                     }, bgInterval);
                 });
             };
         
             window.setTimeout(function() {
-                console.log('eee 1');
                 doAnim();
             }, bgInterval);
     }
