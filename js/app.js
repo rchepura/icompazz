@@ -26,6 +26,37 @@ jQuery(document).ready(function() {
             window.setTimeout(function() {
                 doAnim();
             }, bgInterval);
+            
+        if ( !top.submitEmail ) {
+            top.submitEmail = function submitEmail() {
+                var email = jQuery.trim(jQuery('[name="email"]').val());
+                var data = {
+                    'email': email
+                };
+                jQuery.ajax({
+                    type: 'POST',
+                    url: 'submit',
+                    data: data,
+                    dataType: 'json',
+                    encode: true,
+                    success: function(output) {
+//                        if (output == 'succeeded') {
+//                          jQuery('#more-info .popover .error-email').hide();
+//                          jQuery('#more-info .popover .success-email').show();
+//                          jQuery('#more-info .popover').fadeIn();
+//                        } else {
+//                          jQuery('#more-info .popover .error-email').show();
+//                          jQuery('#more-info .popover .success-email').hide();
+//                          jQuery('#more-info .popover').fadeIn();
+//                        }
+                    },
+                    error: function(xhr, textStatus, errorThrown) {
+//                        alert(errorThrown);
+                    }
+                });
+                return false;
+            }
+        }
     }
     
     init();
