@@ -1,7 +1,6 @@
 jQuery(document).ready(function() {
     var $ = jQuery,
-        progress_inprocess = false,
-        bgInterval = 3000;
+        bgInterval = 4000;
         
         
     window.$ = $;
