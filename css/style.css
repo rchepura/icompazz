@@ -104,8 +104,35 @@
 }
 
 @media (max-width: 1200px) {
-    
+    .icompazz-form {
+        top: 8%;
+    }
+    .icompazz-form .icompazz-logo-text {
+        margin-bottom: 160px;
+    }
 }
 @media (max-width: 992px) {
-    
+    .icompazz-form {
+        top: 7%;
+    }
+    .icompazz-form .icompazz-logo-text {
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: 414px) {
+    .icompazz-form {
+        top: 5%;
+    }
+    .icompazz-form .icompazz-logo-text {
+        margin-bottom: 120px;
+    }
+}
+@media (max-width: 375px) {
+    .icompazz-form {
+        top: 0;
+    }
+    .icompazz-form .icompazz-logo-text {
+        margin-bottom: 120px;
+    }
 }
