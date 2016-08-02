@@ -28,26 +28,26 @@ jQuery(document).ready(function() {
             
         if ( !top.submitEmail ) {
             top.submitEmail = function submitEmail() {
-                var email = jQuery.trim(jQuery('[name="email"]').val());
+                var email = $.trim($('[name="email"]').val());
                 var data = {
                     'email': email
                 };
-                jQuery.ajax({
+                $.ajax({
                     type: 'POST',
-                    url: 'submit',
+                    url: 'mail.php',
                     data: data,
                     dataType: 'json',
-                    encode: true,
-                    success: function(output) {
-//                        if (output == 'succeeded') {
-//                          jQuery('#more-info .popover .error-email').hide();
-//                          jQuery('#more-info .popover .success-email').show();
-//                          jQuery('#more-info .popover').fadeIn();
-//                        } else {
-//                          jQuery('#more-info .popover .error-email').show();
-//                          jQuery('#more-info .popover .success-email').hide();
-//                          jQuery('#more-info .popover').fadeIn();
-//                        }
+                    success: function(res) {
+                        top.RES = res;
+                        if (res.success) {
+                          $('.box-form .popover .error-email').hide();
+                          $('.box-form .popover .success-email').show();
+                          $('.box-form .popover').fadeIn();
+                        } else {
+                          $('.box-form .popover .error-email').show();
+                          $('.box-form .popover .success-email').hide();
+                          $('.box-form .popover').fadeIn();
+                        }
                     },
                     error: function(xhr, textStatus, errorThrown) {
 //                        alert(errorThrown);

@@ -43,22 +43,23 @@
                                             <button class="btn" type="submit">Submit</button>
                                         </div>
                                     </div>
+									<div class="popover">
+										<div class="popover-content">
+											<div class="success-email">
+												<p>Thank you for your interest!</p>
+												<p>We'll send you the latest updates as they come!</p>
+											</div>
+											<div class="error-email">
+												<br><p>Sorry, your email is invalid. Please try again.</p>
+											</div>
+											<button onclick="jQuery(this).closest('.popover').fadeOut(); return false;" class="btn">Ok</button>
+										</div>
+									</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="popover">
-                        <div class="popover-content">
-                            <div class="success-email">
-                                <p>Thank you for your interest!</p>
-                                <p>We'll send you the latest updates as they come!</p>
-                            </div>
-                            <div class="error-email">
-                                <br><p>Sorry, your email is invalid. Please try again.</p>
-                            </div>
-                            <button onclick="jQuery(this).closest('.popover').fadeOut(); return false;" class="btn">Ok</button>
-                        </div>
-                    </div>
+                    
                 </form>
             </div>
         </div>
